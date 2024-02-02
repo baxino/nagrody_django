@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block page_content %}
+  <form method="post">
+    {% csrf_token %}
+   
+    {% crispy form %}
+    <button type="submit" class="btn btn-success">Save person</button>
+  </form>
+{% endblock page_content %}
